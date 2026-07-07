@@ -15,22 +15,20 @@ export default function App() {
         <Navbar />
         <HeroSection />
       </div>
-      
-      <header className="header">
-        <div className="header__actions">
-          {isOwner ? (
-            <button onClick={logout}>Logout</button>
-          ) : (
-            <button onClick={() => setShowLogin(true)}>Owner login</button>
-          )}
-        </div>
-      </header>
       <main>
         <Gallery isOwner={isOwner} token={token} />
       </main>
       {showLogin && (
         <LoginModal onLogin={login} onClose={() => setShowLogin(false)} />
       )}
+
+      <div className="header__actions">
+          {isOwner ? (
+            <button onClick={logout}>Logout</button>
+          ) : (
+            <button onClick={() => setShowLogin(true)}>Owner login</button>
+          )}
+        </div>
     </div>
   );
 }

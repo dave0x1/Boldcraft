@@ -3,6 +3,7 @@ import ImageCard from './ImageCard';
 import { deleteImage } from '../api';
 import type{ Image } from '../hooks/useImages';
 import UploadButton from './UploadButton';
+import './gallery.css'
 
 interface Props {
   isOwner: boolean;

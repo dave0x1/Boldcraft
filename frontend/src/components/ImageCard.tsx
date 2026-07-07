@@ -8,13 +8,15 @@ interface Props {
 
 export default function ImageCard({ image, isOwner, onDelete }: Props) {
   const thumbnail = image.variants.find(v => v.name === 'thumbnail');
+  const medium = image.variants.find(v => v.name === 'medium');
   const full = image.variants.find(v => v.name === 'full');
 
   return (
     <div className="image-card">
       <a href={full?.url} target="_blank" rel="noopener noreferrer">
         <img
-          src={thumbnail?.url}
+          src={medium?.url}
+            srcSet={`${thumbnail} 400w, ${medium} 800w, ${full} 1600w`}
           alt={image.title ?? image.filename}
           loading="lazy"
         />
