@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useAuth } from './hooks/useAuth';
 import Gallery from './components/Gallery';
 import LoginModal from './components/LoginModal';
+import HeroSection from './components/HeroSection';
+import Navbar from './components/Navbar';
 
 export default function App() {
   const { token, isOwner, login, logout } = useAuth();
@@ -9,8 +11,12 @@ export default function App() {
 
   return (
     <div className="app">
+      <div className="home">
+        <Navbar />
+        <HeroSection />
+      </div>
+      
       <header className="header">
-        <h1>Boldcraft</h1>
         <div className="header__actions">
           {isOwner ? (
             <button onClick={logout}>Logout</button>

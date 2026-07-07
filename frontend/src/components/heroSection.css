@@ -1,0 +1,83 @@
+
+.hero {
+    margin: 4rem 2rem 4rem 2rem;
+}
+
+h1 {
+    font-family: var(--font-body);
+    font-size: 8rem;
+    color: var(--color-accent);
+}
+
+p {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  font-size: 1.5rem;
+}
+
+#main-p {
+  margin: 2rem 0 2rem 0;
+}
+
+.home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem;
+}
+
+#cards-container {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+.cards {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.polaroid {
+    /* border: 2px solid black; */
+    position: absolute;
+    top: var(--top, 0);
+    left: var(--left, 0);
+    transform: rotate(var(--tilt, 0deg));
+    background: #fff;
+    padding: 0.75rem 0.75rem 5rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    width: 220px;
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    z-index: 1;
+}
+
+.polaroid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.polaroid.featured {
+  transform: rotate(var(--tilt, 0deg)) scale(1.05);
+  z-index: 2;
+}
+
+.polaroid:hover {
+  transform: scale(1.05) rotate(0deg);
+  z-index: 3;
+}
+
+#by-timmy {
+    font-family: var(--font-cursive);
+    font-size: 2.5rem;
+    text-align: end;
+}
