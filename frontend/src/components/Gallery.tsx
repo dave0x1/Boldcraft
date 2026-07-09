@@ -43,14 +43,15 @@ export default function Gallery({ isOwner, token }: Props) {
       {images.length === 0
         ? <p className="status">No images yet.</p>
         : <div className="gallery">
-            {images.map(image => (
+            {images.map((image, i) => (
+              <div key={image.id} className={`gallery-item ${i % 2 === 0 ? 'big' : 'half'}`}>
               <ImageCard
-                key={image.id}
                 image={image}
                 isOwner={isOwner}
                 onDelete={handleDelete}
               />
-            ))}
+          </div>
+      ))}
           </div>
       }
       {meta && meta.totalPages > 1 && (
