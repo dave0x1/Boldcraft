@@ -4,6 +4,8 @@ import Gallery from './components/Gallery';
 import LoginModal from './components/LoginModal';
 import HeroSection from './components/HeroSection';
 import Navbar from './components/Navbar';
+import About from './components/About';
+import Footer from './components/Footer';
 
 export default function App() {
   const { token, isOwner, login, logout } = useAuth();
@@ -21,6 +23,7 @@ export default function App() {
       {showLogin && (
         <LoginModal onLogin={login} onClose={() => setShowLogin(false)} />
       )}
+      <About />
 
       <div className="header__actions">
           {isOwner ? (
@@ -29,6 +32,10 @@ export default function App() {
             <button onClick={() => setShowLogin(true)}>Owner login</button>
           )}
         </div>
+        
+      <Footer />
+
+      
     </div>
   );
 }
