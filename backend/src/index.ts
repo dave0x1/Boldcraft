@@ -240,5 +240,5 @@ app.use((err: unknown, req: express.Request, res: express.Response, next: expres
   next();
 });
 
-const port = process.env.PORT ?? 3000;
-app.listen(port, () => console.log(`Listening on PORT ${port}`));
+const port = Number(process.env.PORT) ?? 3000;
+app.listen(port, '0.0.0.0', () => console.log(`Listening on PORT ${port}`));
