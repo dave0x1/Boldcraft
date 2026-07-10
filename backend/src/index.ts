@@ -23,7 +23,7 @@ cloudinary.config({
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: [process.env.FRONTEND_URL ?? 'http://localhost:5173'],
   methods: ['GET', 'POST', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
@@ -240,5 +240,5 @@ app.use((err: unknown, req: express.Request, res: express.Response, next: expres
   next();
 });
 
-const port = Number(process.env.PORT) ?? 3000;
+const port = Number(process.env.PORT) || 3000;
 app.listen(port, '0.0.0.0', () => console.log(`Listening on PORT ${port}`));
