@@ -1,5 +1,5 @@
 import './heroSection.css';
-import Polaroid from './polaroid.tsx';
+// import Polaroid from './polaroid.tsx';
 
 export default function HeroSection(){
     return(
@@ -7,7 +7,7 @@ export default function HeroSection(){
             <div className="main">
                 <div className="intro">
                     <h1 className='header-main'>Boldcraft</h1>
-                    <p id="by-timmy">By Timmy</p>
+                    {/* <p id="by-timmy">By Timmy</p> */}
                     <p id="main-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid natus, nisi eos quaerat facilis tenetur cumque, incidunt, corrupti porro temporibus et non officia quasi suscipit soluta aut corporis eum quas?</p>
                     <div id="main-buttons">
                         <button className='button-primary'>View my work</button>

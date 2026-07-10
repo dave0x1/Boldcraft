@@ -5,8 +5,8 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer__main">
         <div className="footer__brand">
-          <span className="footer__signature">By Timmy</span>
           <h2 className="footer__logo">Boldcraft</h2>
+          {/* <span className="footer__signature">By Timmy</span> */}
           <p className="footer__tagline">
             Commissions, prints, and studio visits are welcome. Let's make
             something with intention.
@@ -41,9 +41,9 @@ export default function Footer() {
         </nav>
 
         <div className="footer__col">
-          <h3 className="footer__heading">Studio</h3>
+          <h3 className="footer__heading">Socials</h3>
           <ul className="footer__links footer__links--contact">
-            <li>
+            {/* <li>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -59,7 +59,7 @@ export default function Footer() {
                 <circle cx="12" cy="10" r="3" />
               </svg>
               Portland, Oregon
-            </li>
+            </li> */}
             <li>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
